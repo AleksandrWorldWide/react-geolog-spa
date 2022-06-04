@@ -1,0 +1,60 @@
+.Language {
+	display: flex;
+	width: 56px;
+	background-color: #147E45;;
+	border-radius: 5px;
+	padding: 6px 8px;
+	position: absolute;
+	right: 0;
+	ul {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		 li {
+			a {
+				// display: inline-block;
+				text-align: left;
+				color: #fff;
+				font-size: 16px;
+				line-height: 19px;
+				
+			}
+			a:hover {
+				color: #fff;
+				text-decoration: underline;
+			}
+			
+		 }
+		 li:not(:last-child) {
+			margin-bottom: 3px;
+		}
+	}
+	
+}
+
+.arrowUp {
+	&::after {
+		content: url('../../../../data/icons/VectorUP.png');
+		position: absolute;
+		top: 5px;
+		right: 5px;
+	}
+	transform: translateY(23px);
+}
+
+.arrowDown {
+	&::after {
+		content: url('../../../../data/icons/VectorDOWN.png');
+		position: absolute;
+		top: 5px;
+		right: 5px;
+	}
+}
+
+.visible {
+	opacity: 1;
+}
+
+.hidden {
+	opacity: 0;
+}

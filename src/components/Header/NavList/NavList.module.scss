@@ -1,0 +1,28 @@
+.NavList {
+	display: flex;
+	flex: 0 1 48%;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+
+	ul {
+		
+		list-style-type: none;
+		display: flex;
+		width: 275px;
+		justify-content: space-between;
+		li {
+			a {
+				color: #4F5665;;
+			}
+		}
+	}
+	a {
+		text-decoration: none;
+	}
+	a:hover {
+		color: #147E45;;
+		text-decoration: underline;
+	}
+
+}

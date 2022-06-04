@@ -1,0 +1,26 @@
+.Button {
+	text-align: center;
+	width: 280px;
+	height: 60px;
+	border: 2px solid #147E45;
+	font-weight: 700;
+	font-size: 17px;
+	line-height: 20px;
+	border-radius: 10px;
+	cursor: pointer;
+	box-shadow: 3px 3px 1px rgba(13, 77, 42, 0.33);
+	&:active {
+		box-shadow: none;
+		transform: translate(3px, 3px);
+	}
+}
+
+.dark {
+	background-color: #147E45;
+	color: #FFFFFF;
+}
+
+.light {
+	background-color: #FFFFFF;
+	color:#147E45;
+}

@@ -1,0 +1,45 @@
+.CardMini {
+	display: flex;
+	justify-content: space-between;
+	width: 526px;
+	height: 284px;
+	&_img {
+		position: relative;
+		img {
+			position: absolute;
+			width: 226px;
+			height: 284px;
+			top: 0;
+			left: 0;
+			object-fit: contain;
+		}
+
+	}
+	&_body {
+		width: 300px;
+		height: 100%;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: left;
+		padding-bottom: 60px;
+	}
+}
+
+.body {
+	
+	&_title {
+		font-weight: 500;
+		font-size: 19px;
+		line-height: 23px;
+		color: #0B132A;
+		margin-bottom: 12px;
+	}
+	&_text {
+		font-size: 17px;
+		line-height: 25px;
+		color: #4F5665;
+		flex: 1 1 auto;
+	}
+}

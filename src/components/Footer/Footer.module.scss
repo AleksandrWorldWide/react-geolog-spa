@@ -1,0 +1,74 @@
+.Footer {
+	text-align: left;
+	&_main {
+		display: flex;
+		justify-content: space-between;
+	}
+	&_sub {
+		font-size: 16px;
+		line-height: 30px;
+		color: #AFB5C0;
+	}
+}
+
+.main {	
+	&_logo {
+		flex: 0 1 43.83333%;
+		margin-top: 12px;
+	}
+	&_body {
+		display: flex;
+		flex: 0 1 43.83333%;
+		justify-content: space-between;
+		margin-bottom: 67px;
+		ul {
+			li {
+				a {
+					text-decoration: none;
+
+				}
+			}
+		}
+	}
+}
+
+.body {
+	
+	
+	&_company {
+		width: 288px;
+		list-style-type: none;
+		a {
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 30px;
+			color: #0B132A;
+		}
+		a:hover {
+			color: #147E45;
+			text-decoration: underline;
+		}
+		li:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+	&_contacts {
+		width: 183px;
+		list-style-type: none;
+
+		a {
+			font-size: 16px;
+			line-height: 19px;
+			color: #4F5665;
+			
+		}
+		a:hover {
+			color: #147E45;
+			text-decoration: underline;
+		}
+
+		li:not(:last-child) {
+			margin-bottom: 25px;
+		}
+	}
+}
