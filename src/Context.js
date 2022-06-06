@@ -1,3 +1,4 @@
 import React from "react";
 
-export const buttonMain = React.createContext()
+export const Context = React.createContext()
+

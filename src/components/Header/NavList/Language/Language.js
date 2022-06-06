@@ -1,10 +1,10 @@
 import css from './Language.module.scss'
-import { buttonMain } from '../../../../Context'
+import { Context } from '../../../../Context'
 import { useContext } from 'react'
 
 export const Language = () => {
 
-	const selector = useContext(buttonMain)
+	const selector = useContext(Context)
 
 	const lang = selector.show ? selector.lang : new Array(selector.lang[0])
 	const cls = selector.show ? [css.Language, css.arrowUp].join(' ') : [css.Language, css.arrowDown].join(' ')

@@ -1,10 +1,10 @@
 import css from './Logo.module.scss'
-import { buttonMain } from '../../../Context'
+import { Context } from '../../../Context'
 import { useContext } from 'react'
 
 export const Logo = () => {
 
-	const logo = useContext(buttonMain)
+	const logo = useContext(Context)
 
 	return (
 		<div className={css.Logo}>

@@ -1,11 +1,11 @@
 import { useContext } from 'react'
-import { buttonMain } from '../../../../Context'
+import { Context } from '../../../../Context'
 import css from './Email.module.scss'
 
 
 export const Email = () => {
 
-	const contacts = useContext(buttonMain)
+	const contacts = useContext(Context)
 
 	const email = contacts.contacts.slice(1,2)
 

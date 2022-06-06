@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import WebFont from 'webfontloader'
+import { Provider } from 'react-redux';
+import {store} from './redux/store'
 
 WebFont.load({
 	google: {
@@ -10,10 +12,16 @@ WebFont.load({
 	}
 })
 
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App title = {'geolog'}/>
+	  <Provider store={store}>
+	  		<App title = {'geolog'}/>
+	  </Provider>
+    
   </React.StrictMode>
 );
 

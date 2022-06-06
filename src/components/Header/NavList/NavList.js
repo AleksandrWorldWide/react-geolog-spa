@@ -2,11 +2,11 @@ import css from './NavList.module.scss'
 import { Email } from './Email/Email'
 import { Language } from './Language/Language'
 import { useContext } from 'react'
-import { buttonMain } from '../../../Context'
+import { Context } from '../../../Context'
 
 export const NavList = () => {
 
-	const company = useContext(buttonMain)
+	const company = useContext(Context)
 
 	const navList = company.company.slice(0,3)
 

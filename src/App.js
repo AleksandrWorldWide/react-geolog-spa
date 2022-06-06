@@ -2,7 +2,9 @@
 import { useEffect, } from 'react';
 import './App.css';
 
-import { Main } from './components/Main/Main';
+
+import  Main  from './components/Main/Main';
+import { Catalog } from './components/Catalog/Catalog';
 
 
 const App = ({title}) => {
@@ -17,8 +19,8 @@ const App = ({title}) => {
   return (
     <div className="App">
 		 
-		 <Main/>
-
+		 {/* <Main/> */}
+		 <Catalog/>
 		 
     </div>
   );
