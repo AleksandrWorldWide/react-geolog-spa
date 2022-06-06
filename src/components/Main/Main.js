@@ -1,35 +1,27 @@
 
-import { Header } from '../Header/Header'
+
 import { Card } from '../Card/Card';
 import { CardMini } from '../CardMini/CardMini';
 import { Context } from '../../Context'
 import { Row } from '../UI/Row/Row';
 import css from './Main.module.scss'
-import { Feedback } from '../Feedback/Feedback';
-import { Footer } from '../Footer/Footer';
 import { useStore } from 'react-redux';
 
 
 
 
 
-const Main = () => {
+export const Main = () => {
 
 	const state = useStore().getState()
 
-	const header = state.header
 	const mainState = state.mainState
 	const info = state.info
 	const mini = state.mini
-	const feedback = state.feedback
+
 
 	return (
 		<main className={CSS.Main}>
-			<Context.Provider value={header}>
-				<Header/>
-			</Context.Provider>
-			
-			<Row height = {123}/>
 			<Context.Provider value={[mainState.button, mainState.theme]}>
 				<Card 
 					header = {mainState.header}
@@ -72,24 +64,6 @@ const Main = () => {
 					})
 				}
 			</div>
-			<Row height={127}/>
-			<Context.Provider value={[feedback.button, feedback.theme]}>
-				<Feedback
-					title = {feedback.title}
-					text = {feedback.text}
-					context={Context}
-				/>
-			</Context.Provider>
-			<Row height={124}/>
-			<Context.Provider value={header}>
-				<Footer
-					company = {header.company}
-					contacts = {header.contacts}
-					text = {header.text}
-				/>
-			</Context.Provider>
-			<Row height={40}/>
-			
 		</main>
 	)
 }
