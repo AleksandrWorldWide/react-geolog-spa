@@ -4,6 +4,7 @@ import { useStore } from 'react-redux'
 import { Feedback } from '../Feedback/Feedback'
 import { Footer } from '../Footer/Footer'
 import { Row } from '../UI/Row/Row'
+import css from './Pattern.module.scss'
 
 export const Pattern = ({WrappedComponent}) => {
 
@@ -13,8 +14,8 @@ export const Pattern = ({WrappedComponent}) => {
 	const feedback = state.feedback
 
 	return (
-		<>
-		<Context.Provider value={header}>
+		<div className={css.Pattern}>
+			<Context.Provider value={header}>
 				<Header/>
 			</Context.Provider>
 			<Row height = {123}/>
@@ -38,7 +39,7 @@ export const Pattern = ({WrappedComponent}) => {
 				/>
 			</Context.Provider>
 			<Row height={40}/>
-		</>
+		</div>
 		
 	)
 }

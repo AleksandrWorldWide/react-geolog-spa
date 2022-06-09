@@ -1,11 +1,11 @@
 
 
 import { Card } from '../Card/Card';
-import { CardMini } from '../CardMini/CardMini';
 import { Context } from '../../Context'
 import { Row } from '../UI/Row/Row';
 import css from './Main.module.scss'
 import { useStore } from 'react-redux';
+import { Recommended } from '../Recommended/Recommended'
 
 
 
@@ -15,13 +15,11 @@ export const Main = () => {
 
 	const state = useStore().getState()
 
-	const mainState = state.mainState
+	const mainState = state.mainState[0]
 	const info = state.info
-	const mini = state.mini
-
 
 	return (
-		<main className={CSS.Main}>
+		<main className={css.Main}>
 			<Context.Provider value={[mainState.button, mainState.theme]}>
 				<Card 
 					header = {mainState.header}
@@ -30,7 +28,8 @@ export const Main = () => {
 					text = {mainState.text}
 					reverse = {mainState.reverse}
 					features = {mainState.features}
-					context = {Context}
+					full = {mainState.full}
+					isButton = {mainState.isButton}
 				/>
 			</Context.Provider>
 			<Row height = {186}/>
@@ -40,30 +39,11 @@ export const Main = () => {
 					url = {info.url}
 					text = {info.text}
 					reverse = {info.reverse}
-					context = {Context}
+					isButton = {info.isButton}
 				/>
 			</Context.Provider>
 			<Row height = {100}/>
-			<Row height = {40} text = {'С этим товаром покупают :'}/>
-			<Row height = {60}/>
-			<div className={css.Main_mini}>
-				{
-					mini.map((item, id) => {
-
-						return (
-							<Context.Provider value={[item.button, item.theme]}>
-								<CardMini
-									key={item+id}
-									title={item.title}
-									text={item.text}
-									url={item.url}
-									context={Context}
-								/>
-							</Context.Provider>
-						)
-					})
-				}
-			</div>
+			<Recommended/>
 		</main>
 	)
 }

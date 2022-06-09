@@ -1,10 +1,8 @@
 import css from './CardMini.module.scss'
 import { Button } from '../UI/Button/Button'
-import { useContext } from 'react'
 
-export const CardMini = ({title, text, url, context}) => {
+export const CardMini = ({title, text, url}) => {
 
-	const cardButton = useContext(context)
 
 	return(
 		<div className={css.CardMini}>
@@ -18,9 +16,7 @@ export const CardMini = ({title, text, url, context}) => {
 				<div className={css.body_text}>
 					<p>{text}</p>
 				</div>
-				<Button
-					props = {cardButton}
-				/>
+				<Button/>
 			</div>
 		</div>
 	)

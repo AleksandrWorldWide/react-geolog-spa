@@ -1,10 +1,9 @@
-import { useContext } from 'react'
+
 import { Button } from '../UI/Button/Button'
 import css from './Feedback.module.scss'
 
-export const Feedback = ({title, text, context}) => {
+export const Feedback = ({title, text}) => {
 
-	const cardButton = useContext(context)
 
 	return (
 		<div className={css.Feedback}>
@@ -17,9 +16,7 @@ export const Feedback = ({title, text, context}) => {
 				</div>
 			</div>
 			<div className={css.Feedback_call}>
-				<Button
-					props = {cardButton}
-				/>
+				<Button/>
 			</div>
 		</div>
 	)
